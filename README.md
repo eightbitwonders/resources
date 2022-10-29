@@ -1,2 +1,6 @@
 # about
-This project contains the user manual and other stuff like that for https://github.com/eightbitwonders/app[8-bit wonders].
+This project contains the user manual and other stuff like that for [8-Bit Wonders](https://github.com/eightbitwonders/app).
+
+
+
+
