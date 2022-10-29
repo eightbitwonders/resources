@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.16">
+<title>8-Bit-Wonders</title>
+<style>
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+
+@import url(https://cdn.jsdelivr.net/gh/asciidoctor/asciidoctor@2.0/data/stylesheets/asciidoctor-default.css); /* Default asciidoc style framework - important */
+
+/* CUSTOMISATIONS */
+/* Change the values in root for quick customisation. If you want even more fine grain... venture further. */
+
+:root{
+--maincolor:#202020;
+--primarycolor:#998cff;
+--secondarycolor:#ff5122;
+--tertiarycolor:#9084e7;
+--sidebarbackground:#202020;
+--linkcolor:#ffcc00;
+--linkcoloralternate:#ffcc00;
+--white:#cccccc;
+}
+
+/* Text styles */
+
+body{font-family: Verdana, Helvetica, sans-serif;background-color: var(--maincolor);color:var(--white);}
+
+h1{color:var(--primarycolor) !important;font-family:Verdana, Helvetica,sans-serif;}
+h2,h3,h4,h5,h6{color:var(--secondarycolor) !important;font-family:Verdana, Helvetica,sans-serif;}
+.title{color:var(--white) !important;font-family:Verdana, Helvetica,sans-serif;font-style: normal; font-weight: normal;}
+p{font-family: Verdana, Helvetica,sans-serif ! important}
+toc.toc2 a:link{color:var(--linkcolor);}
+blockquote{color:var(--tertiarycolor) !important}
+.quoteblock{color:var(--white)}
+code{color:var(--linkcoloralternate);background-color: var(--sidebarbackground) !important}
+a:hover,a:focus{color:var(--linkcolor);}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Table styles */
+th{background-color: var(--maincolor);color:var(--white) !important;}
+td{background-color: var(--maincolor);color: var(--linkcoloralternate) !important}
+
+
+
+#toc.toc2{background-color:var(--sidebarbackground);}
+#toctitle{color:var(--white);}
+
+/* Responsiveness fixes */
+video {
+  max-width: 100%;
+}
+
+@media all and (max-width: 600px) {
+  table {
+    width: 55vw!important;
+    font-size: 3vw;
+  }
+}
+
+.exampleblock > .content {
+  background-color: var(--maincolor);
+}
+
+a {
+  color: var(--linkcolor);
+}
+
+.admonitionblock td.icon .icon-tip::before {
+  text-shadow: none;
+  color: var(--white);
+}
+.admonitionblock td.icon .icon-note::before {
+  color: var(--tertiarycolor);
+}
+.admonitionblock td.icon .icon-important::before {
+  color: var(--linkcolor);
+}
+/*.admonitionblock td.icon .icon-caution::before {
+  color: var(--linkcoloralternate);
+}*/
+.admonitionblock td.icon .icon-warning::before {
+  color: var(--primarycolor);
+}
+
+#preamble > .sectionbody > .paragraph:first-of-type p {
+  color: var(--white);
+}
+
+.quoteblock blockquote::before {
+  color: var(--primarycolor);
+}
+.quoteblock .attribution cite, .verseblock .attribution cite {
+  color: var(--white);
+}
+.verseblock pre {
+  color: var(--white);
+}
+.quoteblock blockquote, .quoteblock blockquote p {
+  color: var(--white);
+}
+
+.listingblock.content.pre {
+}
+.sidebarblock {
+  background: var(--sidebarbackground);
+}
+.literalblock pre, .listingblock pre:not(.highlight), .listingblock pre[class="highlight"], .listingblock pre[class^="highlight "], .listingblock pre.CodeRay, .listingblock pre.prettyprint {
+  background: var(--sidebarbackground);
+  color: var(--white);
+}
+
+#header .details {
+  color: var(--white);
+}
+#header .details span.email a {
+  color: var(--linkcoloralternate);
+}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1>8-Bit-Wonders</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Inhalt</div>
+<ul class="sectlevel1">
+<li><a href="#_voll_retro_voll_android">Voll retro! Voll Android!</a></li>
+<li><a href="#_erste_schritte">Erste Schritte</a>
+<ul class="sectlevel2">
+<li><a href="#_der_startbildschirm">Der Startbildschirm</a></li>
+<li><a href="#_der_emulationsbildschirm">Der Emulationsbildschirm</a></li>
+<li><a href="#_eine_diskette_einlegen">Eine Diskette einlegen</a></li>
+<li><a href="#_die_virtuelle_tastatur">Die virtuelle Tastatur</a></li>
+<li><a href="#_joysticks">Joysticks</a></li>
+<li><a href="#_verwende_eine_echte_tastatur">Verwende eine echte Tastatur</a></li>
+<li><a href="#_die_emulation_beenden">Die Emulation beenden</a></li>
+</ul>
+</li>
+<li><a href="#_das_ganze_menü">Das ganze Menü</a>
+<ul class="sectlevel2">
+<li><a href="#_tastatur">Tastatur</a></li>
+<li><a href="#_warp_modus">Warp Modus</a></li>
+<li><a href="#_datei_öffnen">Datei öffnen</a></li>
+<li><a href="#_datenträger_aus_liste">Datenträger aus Liste</a></li>
+<li><a href="#_datenträger_entfernen">Datenträger entfernen</a></li>
+<li><a href="#_bandlaufwerk_kontrolle">Bandlaufwerk Kontrolle</a></li>
+<li><a href="#_datenträger_erstellen">Datenträger erstellen</a></li>
+<li><a href="#_einstellungen">Einstellungen</a></li>
+<li><a href="#_verknüpfung_erstellen">Verknüpfung erstellen</a></li>
+<li><a href="#_teilen">Teilen</a></li>
+<li><a href="#_reset">Reset</a></li>
+<li><a href="#_zeitmaschine">Zeitmaschine</a></li>
+<li><a href="#_snapshot">Snapshot</a></li>
+<li><a href="#_pause">Pause</a></li>
+</ul>
+</li>
+<li><a href="#_alle_einstellungen">Alle Einstellungen</a>
+<ul class="sectlevel2">
+<li><a href="#_tastatur_2">Tastatur</a></li>
+<li><a href="#_joystick">Joystick</a>
+<ul class="sectlevel3">
+<li><a href="#_virtueller_touch_joystick">Virtueller Touch Joystick</a></li>
+<li><a href="#_virtuelles_lenkrad_auf_dem_touchscreen">Virtuelles Lenkrad auf dem Touchscreen</a></li>
+<li><a href="#_tastaturbelegung_a_und_tastaturbelegung_b">Tastaturbelegung A und Tastaturbelegung B</a></li>
+<li><a href="#_hardwarejoysticks">Hardwarejoysticks</a></li>
+</ul>
+</li>
+<li><a href="#_geräte">Geräte</a></li>
+<li><a href="#_video">Video</a></li>
+<li><a href="#_audio">Audio</a></li>
+</ul>
+</li>
+<li><a href="#_die_vorinstallierten_spiele">Die vorinstallierten Spiele</a>
+<ul class="sectlevel2">
+<li><a href="#_bubble_escape">Bubble Escape</a></li>
+<li><a href="#_formula_1_simulator">Formula 1 Simulator</a></li>
+<li><a href="#_kikstart_2">Kikstart 2</a></li>
+<li><a href="#_monty_on_the_run">Monty On The Run</a></li>
+</ul>
+</li>
+<li><a href="#_lizenz">Lizenz</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_voll_retro_voll_android">Voll retro! Voll Android!</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Hallo, willkommen bei 8-Bit-Wonders. 8-Bit-Wonders ist ein Emulator (lies darüber mehr in der <a href="https://de.wikipedia.org/wiki/Emulator">Wikipedia</a>), mit dem du mit den Computern deiner Jugend (oder der deiner Eltern oder der deiner Großeltern) arbeiten und spielen kannst und dabei alle Vorteile der Gegenwart behältst:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Du kannst alle Eingabegeräte verwenden, die dein Gerät unterstützt, externe Tastaturen, Gamepads und Joystick, egal ob sie über USB oder Bluetooth angeschlossen werden und natürlich den Touchscreen.</p>
+</li>
+<li>
+<p>8-Bit-Wonders unterstützt das Laden und Speichern von Programmen von deinem Gerät und aus Cloud-Diensten wie Google One, Microsoft OneDrive oder Nextloud.</p>
+</li>
+<li>
+<p>Teile Spielstände einfach mit anderen Leuten. Du kannst den aktuellen Stand deines Spieles (oder eines anderen Programms) mit allem was dazugehört in eine Datei packen und teilen.</p>
+</li>
+<li>
+<p>8-Bit-Wonders passt sich an dein Gerät an und verwendet die bestmögliche Audio- und Videoausgabe, außerdem passt das Layout immer zur Bildschirmgröße und -ausrichtung. Es werden alle Android-Versionen ab Kitkat (Android 4.4) unterstützt, unter neuen Versionen ist aber die Tonausgabe besser.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In den nächsten Abschnitten erfährst du, wie du 8-Bit-Wonders optimal nutzen kannst und, falls du die Originalrechner nicht kennst, wie man Disketten einlegt, den richtigen Joystick auswählt und so weiter.</p>
+</div>
+<div class="paragraph">
+<p>8-Bit-Wonders basiert auf der Arbeit des <a href="https://vice-emu.sourceforge.io/">VICE-Teams</a> und anderen Open-Source- oder kostenlosen Komponenten. Erfahre mehr, indem du auf den Startbildschirm "Info" und dann "Über 8-Bit-Wonders" antippst.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_erste_schritte">Erste Schritte</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_der_startbildschirm">Der Startbildschirm</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../images/main.png" alt="Startbildschirm">
+</div>
+</div>
+<div class="paragraph">
+<p>Hier kannst du einen Computer "anschalten" oder ein vorbereitetes Spiel spielen. Du kannst zusätzliche Kacheln erstellen oder welche importieren, die mit dir geteilt wurden. Wie das geht, erfährst du später.</p>
+</div>
+<div class="paragraph">
+<p>Einfach die Kachel antippen, die du starten willst.
+Beim ersten Mal müssen eventuell noch einige Dateien heruntergeladen werden,
+dazu brauchst du eine Internetverbindung, danach geht der Start auch ohne.
+Wenn du länger auf eine Kachel tippst, geht ein Menü mit weiteren Funktionen auf.</p>
+</div>
+<div class="paragraph">
+<p>Über Info erfährst du mehr über das Programm und kannst dir die Lizenz anschauen
+oder diese Anleitung direkt in der App lesen
+.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_der_emulationsbildschirm">Der Emulationsbildschirm</h3>
+<div class="paragraph">
+<p>Hier spielt die Musik.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/emulation-de.png" alt="Emulation">
+</div>
+</div>
+<div class="paragraph">
+<p>In dem Bild oben hat jemand schon das erste Programm eingegeben und gestartet.</p>
+</div>
+<div class="paragraph">
+<p>Die Tastatur hat alle Tasten, die auch die originalen Computer haben,
+einige Tasten sind aber an eine andere Stelle gewandert, damit der Platz ausreicht.</p>
+</div>
+<div class="paragraph">
+<p>Starte zum Ausprobieren den C64. Nach einer kurzen Zeit solltest du den READY.-Prompt, den blinkenden Cursor und die Tastatur sehen, wenn du dein Gerät hochkant hältst.</p>
+</div>
+<div class="paragraph">
+<p>Du kannst jetzt deinen ersten Befehl eintippen:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>POKE 53280, 0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Drücke die Eingabetaste und staune über den Grafikeffekt, er ist auch nach 40 Jahren noch verblüffend.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_eine_diskette_einlegen">Eine Diskette einlegen</h3>
+<div class="paragraph">
+<p>Als nächstes legst du eine Diskette ein und startest ein Programm, mit dem du Joysticks und Tastatur ausprobieren kannst.
+Du musst 8-Bit-Wonders dazu kurz verlassen und dir das <a href="8bitwonders.d64">Diskettenabbild von hier herunterladen</a>. Gehe danach zurück zu 8-Bit-Wonders und beende die Pause, indem du den Pausendialog anippst.</p>
+</div>
+<div class="paragraph">
+<p>Öffne dann das Menü über das Hamburger-Symbol über der Tastatur und gehe auf "Datei öffnen". Je nachdem, welche Android-Version du benutzt, musst du erst den Zugriff erlauben, anschließend kannst den Download-Ordner öffnen und dort "8-bit-wonders.d64" auswählen (Dateien mit der Endung d64 sind die Abbilder der Disketten).</p>
+</div>
+<div class="paragraph">
+<p>Als nächstes kannst du die Diskette in ein Laufwerk einlegen oder direkt ein Programm von der Diskette starten. Jetzt willst du das Programm INPUT starten, tippe also auf "INPUT", um Joysticks und Tastatur auszuprobieren.</p>
+</div>
+<div class="paragraph">
+<p>Du siehst wieder den Startbildschirm und kurz den Text</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>LOAD "INPUT", 8, 1
+SEARCHING FOR INPUT
+LOADING
+READY.
+RUN</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Danach wird das Programm gestartet.</p>
+</div>
+<div class="paragraph">
+<p>Manchmal gibt es hier eine kurze Pause, die aus technischen Gründen notwendig ist.</p>
+</div>
+<div class="paragraph">
+<p>Die Methode funktioniert mit allen Diskettenabbildern und Kassettenabbildern für die Commodore-Datasette.</p>
+</div>
+<div class="paragraph">
+<p><strong>Jetzt kannst du jedes Programm oder Spiel starten, für das du ein Disketten- oder Kassettenabbild hast!</strong> Viele Abbilder findest du im Internet, die erkennst sie an den Endungen d64 (Diskette) oder t64 und tap (Kassette).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_die_virtuelle_tastatur">Die virtuelle Tastatur</h3>
+<div class="paragraph">
+<p>Du kannst jetzt auf der virtuellen Tastatur tippen und siehst was du getippt hast. Um die grafischen Symbole unten auf den meisten Tasten einzutippen, drücke zuerst die "C="- oder die "SHIFT"-Taste und dann den Buchstaben. Wundere dich nicht, wenn die Eingabe ein bisschen träge ist, die richtigen Programme funktionieren schneller (Dieses Programm schneller machen steht auf der To-Do-Liste).</p>
+</div>
+<div class="paragraph">
+<p>Wenn du zum Eingeben von Sonderzeichen die Umschalttaste ("Shift") oder "C=" benutzen willst, musst du sie nicht festhalten. Tippe sie einfach an und sie bleibt solange angeschaltet, bis du die nächste Taste gedrückt hast oder du sie nochmal antippst. Zum Umschalten zwischen Groß- und Kleinschreibung und Großbuchstaben mit grafischen Zeichen drückst du einfach "Shift" und "C=" gleichzeitig oder direkt nacheinander.</p>
+</div>
+<div class="paragraph">
+<p>Die Tastatur wird automatisch eingeschaltet, wenn du das Gerät hochkant hältst und ausgeschaltet, wenn du das Gerät quer hältst. Du kannst aber über den Hamburger das Menü öffnen und die Tastatur über den Menüpunkt umschalten. Wenn im Querformat der Bildschirm dann nicht mehr komplett angezeigt wird, kannst du ihn nach oben und unten wischen und durch doppelt antippen vergrößern und verkleinern.</p>
+</div>
+<div class="paragraph">
+<p>Tipp: schalte die virtuelle Tastatur nur an, wenn du sie brauchst. Der virtuelle Joystick ist dann bequemer zu erreichen.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_joysticks">Joysticks</h3>
+<div class="paragraph">
+<p>Um die Joysticks auszuprobieren, musst du sie mit den richtigen Anschlüssen ("Ports) verbinden.</p>
+</div>
+<div class="paragraph">
+<p>Öffne dazu wieder das Menü über das Hamburger-Symbol und gehe auf Einstellungen. In der folgende Aktivität kannst du den Abschnitt mit den Joysticks öffnen und siehst dann, dass du vier Joystickports verwenden kannst. Die letzten beiden werden nicht oft benutzt, aber für manche Spiele kannst du sie verwenden.</p>
+</div>
+<div class="paragraph">
+<p>Wenn du für einen Joystickport die Liste öffnest, siehst du alle Geräte, die du als Joystick verwenden kannst. Wähle als Joystick in Port #2 Touchscreen-Joystick aus, unter der Liste erscheinen jetzt Einstellmöglichkeiten für den Touchscreen-Joystick. Wenn dein Gerät keinen Touchscreen hat, wird der Touchscreen-Joystick auch nicht angezeigt, wähle dann irgendeinen anderen. Die Liste wird aktualisiert, sobald du einen Gerät, das man als Joystick verwenden kann, verbindest oder entfernst.</p>
+</div>
+<div class="paragraph">
+<p>Hast du den Touchscreen-Joystick ausgewählt und wechselst mit der Zurück-Taste oder Zurück-Geste wieder in die Emulation, werden ein Joystick und ein Feuerknopf halbdurchsichtig angezeigt. Wenn du sie benutzt, siehst du einen Punkt im rechten Joystickbild, der die gedrückte Richtung und den Feuerknopf anzeigt.</p>
+</div>
+<div class="paragraph">
+<p>Du kannst jetzt die Joysticks der Reihe nach ausprobieren. Fällt dir auf, dass ein Joystick in Port #1 Tastatureingaben anzeigt, wenn du ihn bewegst? Das ist auch beim Original-C64 so und kein Problem.</p>
+</div>
+<div class="paragraph">
+<p>Bei C64-Spielen für einen Spieler musst du ausprobieren, welcher Joystickport verwendet wird.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_verwende_eine_echte_tastatur">Verwende eine echte Tastatur</h3>
+<div class="paragraph">
+<p>Wenn du viel schreibst, kann eine echte Tastatur besser sein als die virtuelle. Verbinde eine Hardware-Tastatur mit deinem Gerät und tippe ein paar Tasten, damit sie aus dem Stromsparmodus aufgeweckt wird. Wenn du jetzt wieder die Einstellungen öffnest, gibt es einen neuen Abschnitt Tastatur. Hier musst du die Sprache deiner Tastatur auswählen, die du in Android eingestellt hast und kannst aussuchen, ob die Taste gedrückt werden soll, die sich beim emulierten Computer an der gleichen Stelle befindet (Wenn du auf einer deutschsprachigen Tastatur ein "Z" drückst, wird ein "Y" angezeigt) oder die, auf der das gleiche Symbol steht ("Z" bleibt "Z"). Das ist Geschmackssache, probiere es einfach aus.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_die_emulation_beenden">Die Emulation beenden</h3>
+<div class="paragraph">
+<p>Über die Zurück-Taste deines Geräts oder die Zurück-Geste beendest du die Emulation, nachdem du noch einmal gefragt wurdest.</p>
+</div>
+<div class="paragraph">
+<p><strong>Jetzt weißt du alles Notwendige, um ein Spiel oder anderes Programm zu laden, zu starten und die Tastatur und Joysticks zu benutzen.</strong> In den folgenden Abschnitten erfährst du aber noch mehr.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_das_ganze_menü">Das ganze Menü</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_tastatur">Tastatur</h3>
+<div class="paragraph">
+<p>Über den Schalter schaltest du die virtuelle Tastatur an oder aus. Das ist unter <a href="#_die_virtuelle_tastatur">Die virtuelle Tastatur</a> in den ersten Schritten beschrieben.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_warp_modus">Warp Modus</h3>
+<div class="paragraph">
+<p>Normalerweise laufen die Programme in der Originalgeschwindigkeit. Mit dem Warp-Modus laufen sie so schnell, wie mit deiner Hardware möglich ist, so kannst du Wartezeiten abkürzen.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_datei_öffnen">Datei öffnen</h3>
+<div class="paragraph">
+<p>Auf dem Startbildschirm sind bereits einige Spiele vorinstalliert. Für mehr Abwechslung kannst du
+die Standard-Emulation eines Geräts starten und Dateien öffnen, die zum Beispiel die Daten
+von Steckmodulen, Disketten oder Kassetten enthalten.
+Dabei kannst lokale Dateien und Clouddienste verwenden.</p>
+</div>
+<div class="paragraph">
+<p>Öffne das Menü über das Hamburger-Symbol, nachdem du die Emulation gestartet hast )eventuell musst du bei neueren Android-Version eine Sicherheitsabfrage bestätigen).</p>
+</div>
+<div class="paragraph">
+<p>Wähle die Datei aus, die du öffnen willst.
+Die Emulation führt dann die passende Aktion aus,
+zum Beispiel das Steckmodul einstecken oder die Diskette öffnen.
+Je nachdem was du ausgewählt hast,
+wird die Aktion gleich ausgeführt oder du kannst noch Festlegungen treffen,
+so kannst du unter anderem auswählen, welches Programm gestartet wird oder in welches Laufwerk eine Diskette eingelegt werden soll.</p>
+</div>
+<div class="paragraph">
+<p>Beim Einlegen der Diskette wird kein Programm gestartet, du kannst aber hinterher auf die Inhalte zugreifen. Diese Funktion brauchst du, wenn ein Programm auf mehrere Disketten verteilt ist und du die Diskette wechseln musst. Wenn du ein Programm starten willst, tippe einfach auf den Programmnamen.</p>
+</div>
+<div class="paragraph">
+<p>Manchmal besteht ein Programm aus mehreren Teilen, die alle angezeigt werden. Meistens musst du dann den ersten Eintrag antippen. Falls der nicht geht, probiere die anderen.</p>
+</div>
+<div class="paragraph">
+<p>Wenn du ein Kassettenlaufwerk (Datasette) emulierst, kannst du im Menü <a href="#_bandlaufwerk_kontrolle">Bandlaufwerk Kontrolle</a>
+die Knöpfe zum Abspielen, Stoppen, Aufnehmen und Spulen des Bandes benutzen.</p>
+</div>
+<div class="paragraph">
+<p>Folgende Dateiformate werden unterstützt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Diskettenabbilder: die wichtigsten Formate sind d64, g64, d64 (VC 1540/1541), d71 (VC 1571), d81 (VC 1581), es funktionieren aber auch die anderen Formate, die VICE unterstützt.</p>
+</li>
+<li>
+<p>Kassettenabbilder: t64, tap (VC 1531)</p>
+</li>
+<li>
+<p>Fliplisten: flp, lst. Fliplisten sind Dateien mit einer Liste von Dateinamen für Diskettenabbilder. Wenn ein Spiel auf mehreren Disketten gespeichert ist, dann kannst du die Disketten wechseln, ohne sie über das Dateisystem suchen zu müssen. Mehr dazu steht in <a href="#_datenträger_aus_liste">Datenträger aus Liste</a>.</p>
+</li>
+<li>
+<p>Steckmodule: crt, bin. Module mit der Endung crt werden automatisch erkannt, bei Modulen mit der Endung bin musst du noch angeben, welches Modul in der Datei gespeichert ist.</p>
+</li>
+<li>
+<p>Snapshots: vsf. Du kannst Snapshots, die du mit VICE am PC erstellt hast, importieren, sie müssen aber mit der Version erstellt werden, die auch in 8-Bit-Wonders verwendet wird (zur Zeit ist das die VICE_Version 3.5). Im Abschnitt <a href="#_snapshot">Snapshot</a> steht mehr über Snapshots und wie du sie noch verwendest.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_datenträger_aus_liste">Datenträger aus Liste</h3>
+<div class="paragraph">
+<p>Wenn du eine Fliplist (siehe <a href="#_datei_öffnen">Datei öffnen</a>) geöffnet oder einen geteilten auf dem Startbildschirm einen Stand mit mehreren Diskettenabbildern gestartet hast, wird der Menüpunkt aufrufbar und du kannst hier die Disketten einfacher wechseln als über <a href="#_datei_öffnen">Datei öffnen</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_datenträger_entfernen">Datenträger entfernen</h3>
+<div class="paragraph">
+<p>Hier kannst du ein eingelegtes Disketten- oder Kassettenabbild wieder entfernen. Falls du Daten gespeichert oder geändert hast, werden die in das Dateisystem deines Geräts zurückgeschrieben oder in die Cloud hochgeladen. Das wird auch gemacht, wenn du den Emulator beendest. Der Menüpunkt wird nur angezeigt, wenn mindestens ein Steckmodul-, Disketten- der Kassettenabbild eingelegt ist.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bandlaufwerk_kontrolle">Bandlaufwerk Kontrolle</h3>
+<div class="paragraph">
+<p>Wenn du ein t64-Kassettenabbild eingelegt hast, kannst du hier die Tasten des Kassettenlaufwerks benutzen, um zu spulen oder Dateien zu laden und zu speichern. Du wirst normalerweise am Bildschirm aufgefordert, die Tasten zu drücken.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_datenträger_erstellen">Datenträger erstellen</h3>
+<div class="paragraph">
+<p>Hier kannst du neue Disketten- und Kassetenabbilder erstellen. Gib den internen Namen und den Datentyp ein. Übliche Namen sind d64 (Standard-Diskettenabbilder)  und t64 (Standard-Kassettenabbilder), aber auch d71 (doppelte Speicherkapazität) und d81 (3.5-Zoll-Diskettenabbild) sind möglich. Die anderen Formate sind Spezialfälle. Bei Diskettenabbildern kannst du zusätzlich noch eine ID eingeben, Disketten sollten unterschiedliche IDs haben.</p>
+</div>
+<div class="paragraph">
+<p>Nachdem du "Erstellen" ausgewählt hast, kannst du noch den Speicherort auswählen. Eventuell musst danach noch festlegen, in welches Laufwerk das neue Abbild eingelegt werden soll.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_einstellungen">Einstellungen</h3>
+<div class="paragraph">
+<p>Ruft <a href="#_alle_einstellungen">Alle Einstellungen</a> auf.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_verknüpfung_erstellen">Verknüpfung erstellen</h3>
+<div class="paragraph">
+<p>Hier kannst du den aktuellen Stand als neue Kachel auf dem Startbildschirm ablegen. Gib einen Namen ein, der dann auf dem Startbildschirm angezeigt wird, als Bild wird automatisch der aktuelle Inhalt des Monitors verwendet. Wenn du den Stand vom Startbildschirm startest, wird er so fortgesetzt, wie du gespeichert hast.
+Du kannst Einstellungen vornehmen und Snapshots speichern, die nur für diesen Stand gelten.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_teilen">Teilen</h3>
+<div class="paragraph">
+<p>Du kannst den gesamten Stand in eine Datei verpacken und mit anderen teilen. In den verpackten Stand kommen deine Beschreibung, alle verwendeten Disketten- , Kassetten- und Steckmodulabbilder, die aktuellen Benutzereinstellungen und der Speicherinhalt des emulierten Computers. Falls noch mehr Diskettenabbilder zum später einlegen gebraucht werden, kannst du die noch hinzufügen.</p>
+</div>
+<div class="paragraph">
+<p>Du solltest darauf achten, die Angaben, ob Joysticks oder die Tastatur notwendig sind, richtig zu setzen. Sie sind aber vorbelegt, je nachdem ob du Joysticks oder die Tastatur angeschaltet hast.</p>
+</div>
+<div class="paragraph">
+<p>Wenn du fertig bist, kannst du die neue Datei mit der Endung "8bw" teilen. Alle, mit denen du die Datei teilst, können sie zum Startbildschirm der App hinzufügen und so fortsetzen, wie du gespeichert hast.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_reset">Reset</h3>
+<div class="paragraph">
+<p>Hier kannst du die Emulation in den Start nach dem Anschalten zurücksetzen. Der Unterschied zwischen einem harten und einem weichen Reset ist der, dass beim harten Reset der Speicherinhalt überschrieben wird. Normalerweise spielt es keine Rolle, ob du einen weichen oder harten Reset machst. Manchmal startet der weiche Reset ein Spiel neu anstelle nur den gesamten Computer zurückzusetzen. Wähle dann den harten Reset.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_zeitmaschine">Zeitmaschine</h3>
+<div class="paragraph">
+<p>Mit der Zeitmaschine kannst du die Emulationen in einen Stand zurücksetzen, den sie vor wenigen Sekunden hatte. So kannst du knifflige Probleme noch einmal versuchen zu lösen.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_snapshot">Snapshot</h3>
+<div class="paragraph">
+<p>Hier kannst du bis zu fünf Stände speichern und wieder laden. Jede Kachel auf dem Startbildschirm hat ihre eigenen fünf Stände.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pause">Pause</h3>
+<div class="paragraph">
+<p>Pausiert die Emulation. Du kannst sie fortsetzen, indem du irgendwo auf den Bildschirm tippst. Allerdings brauchst du die Funktion nicht unbedingt, den bereits das Öffnen des Menüs pausiert die Emulation.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_alle_einstellungen">Alle Einstellungen</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_tastatur_2">Tastatur</h3>
+<div class="paragraph">
+<p>Wenn du eine Hardware-Tastatur angeschlossen hast, kannst du den Abschnitt für die Tastatur öffnen
+und dort Anpassungen vornehmen.</p>
+</div>
+<div class="paragraph">
+<p>Achte darauf, dass die Spracheinstellungen zu den Systemeinstellungen
+deiner Tastatur passen.
+Du kannst frei wählen, ob in der Emulation die Tasten gedrückt werden sollen, die an der gleichen Position stehen wie auf deiner Hardwaretastatur oder die mit den gleichen Symbolen.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_joystick">Joystick</h3>
+<div class="paragraph">
+<p>Die emulierten Computer haben einen oder mehrere Joystickports. Du kannst jedes Gerät, das man als Joystick verwenden kann (also auch Hardwaretastaturen) einem Joystickport zuweisen, indem du es aus der Liste unter dem Namen des Joystickports auswählst. Die Liste wird aktualisiert, wenn du Geräte verbindest oder entfernst.</p>
+</div>
+<div class="sect3">
+<h4 id="_virtueller_touch_joystick">Virtueller Touch Joystick</h4>
+<div class="paragraph">
+<p>Der virtuelle Touch Joystick wird auf dem Bildschirm angezeigt, wenn dein Gerät eine Touch-Oberfläche hat.
+Du kannst die Position der Richtungsanzeige und des Feuerknopfs und ihre Transparenz einstellen.
+Drücke den Feuerknopf und drücke oder wische auf der Richtungsanzeige, um den Joystick zu benutzen.</p>
+</div>
+<div class="paragraph">
+<p>Wenn du dich mit dem virtuellen Joystick vertraut machen willst, starte <a href="#_bubble_escape">Bubble Escape</a> vom
+Startbildschirm. Mit dem Joystick beschleunigst du die Seifenblase, die nirgends anstoßen darf
+und die Schlüssel aufsammeln muss. Wenn du alle Leben verbraucht hast, starte das Spiel mit dem
+Feuerknopf neu.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_virtuelles_lenkrad_auf_dem_touchscreen">Virtuelles Lenkrad auf dem Touchscreen</h4>
+<div class="paragraph">
+<p>Vielleicht gefällt dir das Lenkrad für Rennspiele besser als der virtuelle Touch-Joystick.</p>
+</div>
+<div class="paragraph">
+<p>Bewege den Finger auf dem Lenkrad
+hin und her oder tippe auf den rechten und linken Bereich des Lenkrads um zu lenken.
+Bewege den Gashebel nach vorne und hinten, das entspricht den Richtungen Oben und Unten des Joysticks.
+Ziehe den Gashebel zusätzlich zur Mitte des Bildschirms, das entspricht dem Feuerknopf am Joystick.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_tastaturbelegung_a_und_tastaturbelegung_b">Tastaturbelegung A und Tastaturbelegung B</h4>
+<div class="paragraph">
+<p>Wenn du eine Hardwaretastatur angeschlossen hast, kannst du einzelne Tasten wie die Cursortasten
+oder WASD als Joystick verwenden. Du kannst sie dann aber nicht mehr für die Tastatureingabe verwenden. Die Tasten legst du fest, WASD oder Cursortasten sind nur Beispiele.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_hardwarejoysticks">Hardwarejoysticks</h4>
+<div class="paragraph">
+<p>Wenn du einen USB- oder Bluetooth-Joystick verwendest, gibt es keine besonderen Einstellungen, welchen Stick oder D-Pad eines Controllers du verwendest, legst du über die Auswahlliste fest.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_geräte">Geräte</h3>
+<div class="paragraph">
+<p>Hier kannst du einstellen, welches genaue Computermodell und welche Diskettenlaufwerke du verwenden willst. Wenn du die präzise Floppy-Emulation abschaltest, geht das Laden von Diskettenabbildern schneller, funktioniert aber nicht immer.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_video">Video</h3>
+<div class="paragraph">
+<p>Die CRT-Emulation erzeugt Streifen wie auf einem alten Fernsehgerät. Ein älteres Gerät ist eventuell nicht leistungsstark genug für diese Option.</p>
+</div>
+<div class="paragraph">
+<p>Wenn du den Rahmen ausschaltest, wird der tatsächliche Bildschirminhalt größer, eventuell verdeckst du aber mit deinen Händen auf dem Touch-Joystick Teile des Inhalts. Einige Spiele verwenden durch technische Tricks Teile des Rahmens für Inhalte, dann musst du den Rahmen angeschaltet lassen.</p>
+</div>
+<div class="paragraph">
+<p>Die Farbpaletten ändern das Bild auf dem Monitor.</p>
+</div>
+<div class="paragraph">
+<p>Wenn du die Kollisionen ausschaltest, reagiert der Computer nicht, wenn sich Spielfiguren gegenseitig oder den Hintergrund berühren. Du kannst das als Cheat in Spielen benutzen.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_audio">Audio</h3>
+<div class="paragraph">
+<p>Es kann sein, dass dein Gerät zu Leistungsschwach für die hohe Audio-Qualität ist. Probiere es einfach aus.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_die_vorinstallierten_spiele">Die vorinstallierten Spiele</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Achtung, die Computerspiele von damals waren schwerer als Handyspiele von heute, deswegen brauchst du vielleicht ein paar Versuche bis du klar kommst. Mit einem Hardware-Joystick geht es sicher besser als mit den virtuellem Touch-Joystick.</p>
+</div>
+<div class="paragraph">
+<p>Die Beschreibungen sind aus den Originalanleitungen der Spiele.</p>
+</div>
+<div class="sect2">
+<h3 id="_bubble_escape">Bubble Escape</h3>
+<div class="paragraph">
+<p>Du, eine intelligente Seifenblase, wurdest wegen deiner politischen Überzeugungen von der herrschenden Klasse deiner Gesellschaft, einer uralten Drachenrasse, verhaftet. Du findest dich in einem Kerker gefangen, aus dem du entkommen musst. Es gibt nur einen einzigen Ausgang, und es werden fünf verschiedene Schlüssel benötigt, um zu öffnen. Du wirst diese Schlüssel zufällig im gesamten Kerker deponiert finden, aber jeder Raum birgt seine eigenen Gefahren: bewegliche Wände, Feuerbälle, schwebende Wachroboter und Drachenbeamte. Da du eine Seifenblase bist, musst du sehr vorsichtig sein, um zu vermeiden, dass du diese Gefahren und auch die Kerkerwände berührst, sonst wirst du platzen. Glücklicherweise haben Blasen neun Leben, so wie auch Katzen.</p>
+</div>
+<div class="paragraph">
+<p>Bubble Escape ist gut, um mit dem Touch-Joystick zu üben.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_formula_1_simulator">Formula 1 Simulator</h3>
+<div class="paragraph">
+<p>Basierend auf Formel-Eins-Werten für Beschleunigung, Bremsen und Straßenlage wurde dieses Programm für ultimativen Realismus entwickelt. Im richtigen Moment bremsen! Die Idealspur durch die Kurve finden! Bei kreischenden Reifen den Boliden gerade noch auf der Fahrbahn halten! Die Konkurrenz nach Möglichkeit überholen! Hier erfährt man das Tempo und die Aufregung des Motorsports praktisch am eigenen Leib. Acht verschiedene Strecken stehen dabei zur Auswahl, allesamt den berühmtesten und gefürchtetsten Strecken der Welt nachgebildet.</p>
+</div>
+<div class="paragraph">
+<p>STEUERUNG:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Joystick: Rechts und Links zum Steuern, nach unten zum Abbremsen, Feuerknopf zum Anlassen und Gangwechsel.</p>
+</li>
+<li>
+<p>Tasten:</p>
+</li>
+<li>
+<p>&#8592; Abbremsen</p>
+</li>
+<li>
+<p>2: Nach rechts</p>
+</li>
+<li>
+<p>CTRL: - Nach links</p>
+</li>
+<li>
+<p>Space: Gangwechsel.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Im Startbildschirm wird eine andere Strecke ausgewählt, indem du den Joystick in eine der acht Richtungen bewegst und Feuer drückst.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_kikstart_2">Kikstart 2</h3>
+<div class="paragraph">
+<p>Erlebe noch mehr vom Nervenkitzeln des Dirtbike-Fahrens in dieser neuen, verbesserten Action-Simulation für ein oder zwei Spieler. Gegen die Uhr führst du deinen Fahrer über 24 verschiedene Parcours, achten sorgfältig auf die zahlreichen Gefahren und Hindernisse, die auf dich zukommen.
+Dazu gehören:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sprungbretter: Sie werden dich in die Luft werfen, du kannst das verhindern, indem du den Feuerknopf gedrückt hältst.</p>
+</li>
+<li>
+<p>Stufen und Picknicktische: du musst über diese springen!</p>
+</li>
+<li>
+<p>Holzrampen, Sand, Rohre, Ziegelwände, Bildschirmwände und Tore: mach langsam!</p>
+</li>
+<li>
+<p>Reifen, Hecken und Fässer - Fahre schnell drüber, da es gefährlich ist zu springen.</p>
+</li>
+<li>
+<p>Spikes - Vermeide sie diese um jeden Preis - du wurdest gewarnt!</p>
+</li>
+<li>
+<p>Schlamm - Achte auf schlammige Stellen, da sie dich zu Fall bringen werden.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Spielablauf</strong></p>
+</div>
+<div class="paragraph">
+<p>Es ist möglich, einen der 24 verschiedenen Parcours einzugeben, die als A-X aufgelistet sind, und fünf auszuwählen, die gleichzeitig gespielt werden sollen. Falls du runterfällst (und das wirst du), wird der Computer dich in der nächsten geeigneten Position neu starten. In der Zwischenzeit zählt der Timer mit der doppelten Geschwindigkeit der normalen Geschwindigkeit.</p>
+</div>
+<div class="paragraph">
+<p><strong>STEUERUNG</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Joystick oder Tastatur</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Spieler 1 verwendet einen Joystick in Port eins oder Tastatur.</p>
+</li>
+<li>
+<p>Spieler 2 verwendet Joystick in Port 2.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Cursor:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Links: Bremsen</p>
+</li>
+<li>
+<p>Rechts: Bremsen</p>
+</li>
+<li>
+<p>Oben: Wheelie</p>
+</li>
+<li>
+<p>Feuer: Springen</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Tastatur:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Control: Bremsen</p>
+</li>
+<li>
+<p>2: Beschleunigen</p>
+</li>
+<li>
+<p>1:  Wheelie</p>
+</li>
+<li>
+<p>Leertaste: Springen</p>
+</li>
+<li>
+<p>Q: Musik an- und Ausschalten</p>
+</li>
+<li>
+<p>Restore: Das Spiel neu starten.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Icons nach dem Start</strong></p>
+</div>
+<div class="paragraph">
+<p>Verwende die Cursortasten, um ein Symbol auszuwählen, und drücke RETURN oder FIRE, um es auszuwählen.
+Von links nach rechts sind die Symbole:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Spiel starten</p>
+</li>
+<li>
+<p>Highscore-Tabelle anzeigen</p>
+</li>
+<li>
+<p>Zum Editor wechseln</p>
+</li>
+<li>
+<p>Option für einen oder zwei Spieler</p>
+</li>
+<li>
+<p>Den Namen des Spielers eingeben</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Drücke die entsprechende Taste, um die Kurse auszuwählen, die du spielen möchtest.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_monty_on_the_run">Monty On The Run</h3>
+<div class="paragraph">
+<p>Das Spiel ist ein etwas schräges Plattform-Jump-And-Run-Spiel. Schau dir die Bewegungspfade der Feinde und die zeitliche Reihenfolge der Zerquetscher an und überlege dir einen Weg über den Bildschirm, indem du die Seile und Plattformen verwenden. Manchmal musst du einen Umweg nehmen, um an eine andere Stelle auf dem Bildschirm zu gelangen. Sammle Geld und andere Gegenstände auf dem Weg. Bevor du das Spiel startest, musst du fünf Gegenstände aus einer Auswahl von 21 auswählen, um dein "Freedom Kit" zu bilden - wenn du das Spiel startest, ist die richtige Auswahl schon voreingestellt.</p>
+</div>
+<div class="paragraph">
+<p>Starte das Spiel mit dem Feuerknopf. Während des Spiels kannst du mit dem Joystick laufen und klettern und mit dem Feuerknopf springen.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lizenz">Lizenz</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>8-Bit-Wonders steht unter der <a href="https://opensource.org/licenses/GPL-2.0">GPL-2.0</a>. Die Quellcodes sind frei zugänglich unter <a href="https://github.com/eightbitwonders/app" class="bare">https://github.com/eightbitwonders/app</a></p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

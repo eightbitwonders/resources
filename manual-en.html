@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.16">
+<title>8-Bit-Wonders</title>
+<style>
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+
+@import url(https://cdn.jsdelivr.net/gh/asciidoctor/asciidoctor@2.0/data/stylesheets/asciidoctor-default.css); /* Default asciidoc style framework - important */
+
+/* CUSTOMISATIONS */
+/* Change the values in root for quick customisation. If you want even more fine grain... venture further. */
+
+:root{
+--maincolor:#202020;
+--primarycolor:#998cff;
+--secondarycolor:#ff5122;
+--tertiarycolor:#9084e7;
+--sidebarbackground:#202020;
+--linkcolor:#ffcc00;
+--linkcoloralternate:#ffcc00;
+--white:#cccccc;
+}
+
+/* Text styles */
+
+body{font-family: Verdana, Helvetica, sans-serif;background-color: var(--maincolor);color:var(--white);}
+
+h1{color:var(--primarycolor) !important;font-family:Verdana, Helvetica,sans-serif;}
+h2,h3,h4,h5,h6{color:var(--secondarycolor) !important;font-family:Verdana, Helvetica,sans-serif;}
+.title{color:var(--white) !important;font-family:Verdana, Helvetica,sans-serif;font-style: normal; font-weight: normal;}
+p{font-family: Verdana, Helvetica,sans-serif ! important}
+toc.toc2 a:link{color:var(--linkcolor);}
+blockquote{color:var(--tertiarycolor) !important}
+.quoteblock{color:var(--white)}
+code{color:var(--linkcoloralternate);background-color: var(--sidebarbackground) !important}
+a:hover,a:focus{color:var(--linkcolor);}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Table styles */
+th{background-color: var(--maincolor);color:var(--white) !important;}
+td{background-color: var(--maincolor);color: var(--linkcoloralternate) !important}
+
+
+
+#toc.toc2{background-color:var(--sidebarbackground);}
+#toctitle{color:var(--white);}
+
+/* Responsiveness fixes */
+video {
+  max-width: 100%;
+}
+
+@media all and (max-width: 600px) {
+  table {
+    width: 55vw!important;
+    font-size: 3vw;
+  }
+}
+
+.exampleblock > .content {
+  background-color: var(--maincolor);
+}
+
+a {
+  color: var(--linkcolor);
+}
+
+.admonitionblock td.icon .icon-tip::before {
+  text-shadow: none;
+  color: var(--white);
+}
+.admonitionblock td.icon .icon-note::before {
+  color: var(--tertiarycolor);
+}
+.admonitionblock td.icon .icon-important::before {
+  color: var(--linkcolor);
+}
+/*.admonitionblock td.icon .icon-caution::before {
+  color: var(--linkcoloralternate);
+}*/
+.admonitionblock td.icon .icon-warning::before {
+  color: var(--primarycolor);
+}
+
+#preamble > .sectionbody > .paragraph:first-of-type p {
+  color: var(--white);
+}
+
+.quoteblock blockquote::before {
+  color: var(--primarycolor);
+}
+.quoteblock .attribution cite, .verseblock .attribution cite {
+  color: var(--white);
+}
+.verseblock pre {
+  color: var(--white);
+}
+.quoteblock blockquote, .quoteblock blockquote p {
+  color: var(--white);
+}
+
+.listingblock.content.pre {
+}
+.sidebarblock {
+  background: var(--sidebarbackground);
+}
+.literalblock pre, .listingblock pre:not(.highlight), .listingblock pre[class="highlight"], .listingblock pre[class^="highlight "], .listingblock pre.CodeRay, .listingblock pre.prettyprint {
+  background: var(--sidebarbackground);
+  color: var(--white);
+}
+
+#header .details {
+  color: var(--white);
+}
+#header .details span.email a {
+  color: var(--linkcoloralternate);
+}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1>8-Bit-Wonders</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Inhalt</div>
+<ul class="sectlevel1">
+<li><a href="#_full_retro_full_android">Full Retro! Full Android!</a></li>
+<li><a href="#_getting_started">Getting Started</a>
+<ul class="sectlevel2">
+<li><a href="#_the_start_screen">The Start Screen</a></li>
+<li><a href="#_the_emulation_screen">The emulation screen</a></li>
+<li><a href="#_inserting_a_floppy_disk">Inserting a floppy disk</a></li>
+<li><a href="#_the_virtual_keyboard">The virtual Keyboard</a></li>
+<li><a href="#_joysticks">Joysticks</a></li>
+<li><a href="#_use_a_real_keyboard">Use A Real Keyboard</a></li>
+<li><a href="#_leave_emulation">Leave Emulation</a></li>
+</ul>
+</li>
+<li><a href="#_the_whole_menu">The Whole Menu</a>
+<ul class="sectlevel2">
+<li><a href="#_keyboard">Keyboard</a></li>
+<li><a href="#_warp_mode">Warp Mode</a></li>
+<li><a href="#_open_file">Open File</a></li>
+<li><a href="#_medium_from_list">Medium From List</a></li>
+<li><a href="#_remove_disk">Remove Disk</a></li>
+<li><a href="#_datasette_control">Datasette Control</a></li>
+<li><a href="#_create_image">Create Image</a></li>
+<li><a href="#_settings">Settings</a></li>
+<li><a href="#_create_link">Create Link</a></li>
+<li><a href="#_share">Share</a></li>
+<li><a href="#_reset">Reset</a></li>
+<li><a href="#_time_machine">Time Machine</a></li>
+<li><a href="#_snapshot">Snapshot</a></li>
+<li><a href="#_pause">Pause</a></li>
+</ul>
+</li>
+<li><a href="#_all_settings">All Settings</a>
+<ul class="sectlevel2">
+<li><a href="#_keyboard_2">Keyboard</a></li>
+<li><a href="#_joystick">Joystick</a>
+<ul class="sectlevel3">
+<li><a href="#_virtual_touchscreen_joystick">Virtual Touchscreen Joystick</a></li>
+<li><a href="#_virtual_touchscreen_steering_wheel">Virtual Touchscreen Steering Wheel</a></li>
+<li><a href="#_keyset_a_and_keyset_b">KEYSET_A and KEYSET_B</a></li>
+<li><a href="#_hardware_joysticks">Hardware joysticks</a></li>
+</ul>
+</li>
+<li><a href="#_devices">Devices</a></li>
+<li><a href="#_video">Video</a></li>
+<li><a href="#_audio">Audio</a></li>
+</ul>
+</li>
+<li><a href="#_the_preinstalled_games">The preinstalled games</a>
+<ul class="sectlevel2">
+<li><a href="#_bubble_escape">Bubble Escape</a></li>
+<li><a href="#_formula_1_simulator">Formula 1 Simulator</a></li>
+<li><a href="#_kikstart_2">Kikstart 2</a></li>
+<li><a href="#_monty_on_the_run">Monty On The Run</a></li>
+</ul>
+</li>
+<li><a href="#_license">License</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_full_retro_full_android">Full Retro! Full Android!</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Hello, welcome to 8-bit Wonders. 8-Bit-Wonders is an emulator
+(read more about this in the <a href="https://en.wikipedia.org/wiki/Emulator">Wikipedia</a>)
+that allows you to work and play with the computers of your (or your parents' or grandparents') youth  while retaining all the advantages of modern tech:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You can use all the input devices your android device supports like external keyboards, gamepads and joysticks, no matter they are connected via USB or Bluetooth, and of course the touch screen.</p>
+</li>
+<li>
+<p>8-bit Wonders supports downloading and saving programs from your device and from cloud services such as Google One, Microsoft OneDrive or Nextloud.</p>
+</li>
+<li>
+<p>Easily share saved games with others. You can put the current state of your game (or another program) and everything else needed into a single file and share it.</p>
+</li>
+<li>
+<p>8-bit Wonders adapts to your device and uses the best possible audio and video output, besides, the layout always fits the screen size and orientation. All Android versions from Kitkat (Android 4.4) are supported, but under new versions the sound output is better.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the next sections, you&#8217;ll learn how to get the most out of 8-bit wonders and,
+if you don&#8217;t know the original computers, how to insert floppydisks, choose the right joystick and so on.
+8-bit Wonders is based on the work of the <a href="https://vice-emu.sourceforge.io/">VICE team</a>
+and other open source or free components.
+Learn more by tapping About on the Home screen, then tapping About 8-bit Wonders.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_getting_started">Getting Started</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_the_start_screen">The Start Screen</h3>
+<div class="imageblock">
+<div class="content">
+<img src="main.png" alt="Home screen">
+</div>
+</div>
+<div class="paragraph">
+<p>Here you can "turn on" a computer or play a prepared game. You can create additional tiles or import ones that have been shared with you,
+but you&#8217;ll find out how to do this later. For now just tap the tile you want to start. The first time you may need to download some files, for this you need an internet connection, from then on starting is possible without a connection. If you tap on a tile for a long time, a menu with additional functions will open. Tap the Info button to learn more about the program and view the license
+or read these instructions directly in the app
+.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_emulation_screen">The emulation screen</h3>
+<div class="paragraph">
+<p>This is where the music plays.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="emulation-en.png" alt="Emulation">
+</div>
+</div>
+<div class="paragraph">
+<p>In the picture above, someone has already entered and started a first program.</p>
+</div>
+<div class="paragraph">
+<p>The keyboard has all the keys that the original computers have, but some keys have moved to another place so that there is enough space. Start the C64 to try it out. After a short while, you should see the READY-Prompt, the blinking cursor and, if you hold your device upright, the keyboard.</p>
+</div>
+<div class="paragraph">
+<p>You can now type in your first command:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>POKE 53280, 0</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Press Enter and get stunned by the graphic effect, it&#8217;s still amazing after 40 years.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_inserting_a_floppy_disk">Inserting a floppy disk</h3>
+<div class="paragraph">
+<p>Next, insert a floppy disk and start a program to try joysticks and keyboard. You have to leave 8-bit wonders for a moment and get the <a href="8bitwonders.d64">floppy disk image from here</a>. After that, go back to 8-bit wonders and end the pause by tapping the pause dialog.</p>
+</div>
+<div class="paragraph">
+<p>Then open the menu via the hamburger icon above the keyboard and go to "Open File". Depending on which Android version you are using, you must first allow access, then open the download folder and select "8-bit-wonders.d64" (files with the extension d64 are images for a floppy disk).</p>
+</div>
+<div class="paragraph">
+<p>Next, you can insert the floppy disk into a drive or launch a program directly from the disk. Now you want to start the program INPUT, so tap on "INPUT" to try joysticks and keyboard. You will see the home screen again and briefly the text</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>LOAD "INPUT", 8, 1
+SEARCHING FOR INPUT
+LOADING
+READY.
+RUN</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After that, the program will be launched. Sometimes there is a short break here, which is necessary for technical reasons. The method works with all floppy disk images and cassette images for the Commodore datasette.</p>
+</div>
+<div class="paragraph">
+<p><strong>Now you can start any program or game for which you have a floppy or cassette image!</strong> Many images can be found on the Internet, they recognize by the extensions d64 (floppy disk) or t64 and tap (cassette).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_virtual_keyboard">The virtual Keyboard</h3>
+<div class="paragraph">
+<p>You can now type on the virtual keyboard and see what you typed. To type the graphical symbols at the bottom of most keys, first press the "C=" or "SHIFT" key and then the letter. Don&#8217;t be surprised if the input is a bit sluggish, the real-world programs work faster (making this program faster is on the to-do list). If you want to use "Shift" or "C=" to enter special characters, you do not have to hold them down. Just tap them and they will stay active until you press the next key or tap them again. To switch between upper and lower case and uppercase letters with graphical characters, simply press "Shift" and "C=" simultaneously or directly one after the other.</p>
+</div>
+<div class="paragraph">
+<p>The keyboard turns on automatically when you hold the device upright and turns off when you hold the device horizontally. But you can open the menu via the hamburger and toggle the keyboard visibility via the first menu item. If the screen is no longer displayed completely in landscape mode, you can swipe it up and down and double-tap it to zoom in and out.</p>
+</div>
+<div class="paragraph">
+<p>Tip: only turn on the virtual keyboard when you need it. The virtual joystick is then more convenient to reach.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_joysticks">Joysticks</h3>
+<div class="paragraph">
+<p>To try out the joysticks, you need to connect them to the correct ports. To do this, open the menu again via the hamburger icon and go to Settings. In the following activity, you can open the joysticks section and see that you can use four joystick ports.</p>
+</div>
+<div class="paragraph">
+<p>When you open the list for a joystick port, you&#8217;ll see all the devices you can use as joysticks. Select Touchscreen Joystick as the joystick in Port #2, to see and modify the settings for the touchscreen joystick below the list. If your device does not have a touch screen, the touchscreen joystick will not appear, please select any other. The list will be updated as soon as you connect or remove a device that can be used as a joystick.</p>
+</div>
+<div class="paragraph">
+<p>If you have selected the touchscreen joystick and switch back to emulation with the back button or back gesture, a joystick and a fire button are displayed semi-transparent. When you use them, you will see a circle in the right joystick image that shows the pressed direction and the fire button. You can now try the joysticks one by one. Do you notice that a joystick in port #1 displays keystrokes when you move it? This is also the case with the original C64 and no problem.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_use_a_real_keyboard">Use A Real Keyboard</h3>
+<div class="paragraph">
+<p>If you do a lot of typing, a real keyboard is much more comfortabel than the virtual one. Connect a hardware keyboard to your device and tap a few keys to wake it up from battery saver. Now, when you open Settings again, you&#8217;ll see a new keyboard section. Here you must select the language of your keyboard that matches the one you have set in Android (the preset will probably be fine, but check it) and can choose whether to press the key that is in the same place on the emulated computer. It&#8217;s a matter of taste, just try it out.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_leave_emulation">Leave Emulation</h3>
+<div class="paragraph">
+<p>Use the back button on your device or the back gesture to end the emulation after being asked again.</p>
+</div>
+<div class="paragraph">
+<p><strong>Now you know everything you need to load a game or other program, launch it, and use the keyboard and joysticks.</strong> You&#8217;ll learn more in the following sections.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_whole_menu">The Whole Menu</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_keyboard">Keyboard</h3>
+<div class="paragraph">
+<p>Use the switch to turn the virtual keyboard on or off. This is described in <a href="#_use_a_real_keyboard">Use A Real Keyboard</a> in section Getting Started.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_warp_mode">Warp Mode</h3>
+<div class="paragraph">
+<p>Normally, the programs run at the original speed. With the warp mode turned on, they run as fast as your hardware allows, so you can shorten longer waits.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_open_file">Open File</h3>
+<div class="paragraph">
+<p>Some games are already pre-installed on the home screen. For more variety, you can start the default emulation of a device and open files that, for example, contain the data of cartridges, floppy disks or cassettes. You can use on-premises files and cloud services.</p>
+</div>
+<div class="paragraph">
+<p>Open the menu via the hamburger icon after you have started the emulation (you may need to confirm a security prompt on newer Android versions).</p>
+</div>
+<div class="paragraph">
+<p>Select the file you want to open. The emulation then performs the appropriate action, for example, plug in the cartridge or open the floppy disk. Depending on what type of file you have chosen, the action is executed immediately or you can still make determinations, among other things, you can choose which program to start or into which drive you want to insert a floppy disk into.</p>
+</div>
+<div class="paragraph">
+<p>When you insert the floppy disk, no program starts, but you can access the contents of the disk. You will need this function when a program is spread over several floppy disks and you need to change the floppy disk. If you want to start a program, just tap on the program name.</p>
+</div>
+<div class="paragraph">
+<p>Sometimes a program consists of several parts, all of which are displayed. In most cases you have to tap the first entry. If this doesn&#8217;t work, try the others.</p>
+</div>
+<div class="paragraph">
+<p>If you are emulating a cartridge drive (datasette), you can use the buttons to play, stop, record and rewind the tape in the menu <a href="#_datasette_control">Datasette Control</a> .</p>
+</div>
+<div class="paragraph">
+<p>The following file formats are supported:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Floppy images: the most important formats are d64, g64, d64 (VC 1540/1541), d71 (VC 1571), d81 (VC 1581), but all the other formats that VICE supports also work.</p>
+</li>
+<li>
+<p>Cassette images: t64, tap (VC 1531)</p>
+</li>
+<li>
+<p>Fliplists: flp, lst. Fliplists are files containing a list of file names for floppy disk images. If a game is stored on multiple floppy disks, you can change the floppy disks without having to search for them via the file system. For more information, see <a href="#_medium_from_list">Medium From List</a>.</p>
+</li>
+<li>
+<p>Cartridges: crt, bin. Modules with the extension crt are automatically detected, for modules with the extension bin you still have to specify which module is stored in the file.</p>
+</li>
+<li>
+<p>Snapshots: vsf. You can import snapshots taken with VICE on PC, but they must be created with the same version used in 8-bit Wonders (currently this is VICE_Version 3.5). See the section <a href="#_snapshot">Snapshot</a> to learn more about snapshots.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_medium_from_list">Medium From List</h3>
+<div class="paragraph">
+<p>If you have opened a fliplist (see <a href="#_open_file">Open File</a>) or started a tile from start screen with several floppy disk images, the menu item becomes accessible and you can change the floppy disks here more easily than via <a href="#_open_file">Open File</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_remove_disk">Remove Disk</h3>
+<div class="paragraph">
+<p>Here you can remove an inserted floppy disk or cassette image. If you&#8217;ve saved or modified data, it&#8217;s written back to your device&#8217;s file system or uploaded to the cloud, this is also done when you quit the emulator.</p>
+</div>
+<div class="paragraph">
+<p>The menu item is only available if at least one floppy disk image, a cassette image or a cartridge is inserted.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_datasette_control">Datasette Control</h3>
+<div class="paragraph">
+<p>If you have inserted a t64 cassette image, you can use the buttons on the cartridge drive to rewind or load and save files. You will usually be asked on the screen to press the buttons.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_create_image">Create Image</h3>
+<div class="paragraph">
+<p>Here you can create new floppy and cassette images. Enter the internal name and data type. Common names are d64 (standard floppy disk images) and t64 (standard cassette images), but d71 (double capacity) and d81 (3.5-inch floppy disk image) are also possible. The other formats are special cases. For floppy disk images you can also enter an ID, floppy disks should have different IDs.</p>
+</div>
+<div class="paragraph">
+<p>After selecting "Create", you can select the location. You may then need to specify which drive the new image should be inserted into.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_settings">Settings</h3>
+<div class="paragraph">
+<p>Opens <a href="#_all_settings">All Settings</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_create_link">Create Link</h3>
+<div class="paragraph">
+<p>Here you can store the current status on the start screen as a new tile. Enter a name for the tile on the home screen, the current content of the monitor will automatically be used as the tile&#8217;s image.
+Settings and <a href="#_snapshot">Snapshot</a>s are unique to this state and do not affect other tiles.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_share">Share</h3>
+<div class="paragraph">
+<p>You can pack the entire state of the current emulation into one file and share it with others. The file will contain your description, all used floppy disk, cassette and cartridge images, the current user settings and the full state of the emulated computer. If you need more floppy disk images to insert later, you can add them.</p>
+</div>
+<div class="paragraph">
+<p>You should make sure to set the correct information, whether joysticks or the keyboard are necessary. However, they are preset depending on whether you have joysticks or the keyboard switched on.</p>
+</div>
+<div class="paragraph">
+<p>When you&#8217;re done, you can share the new file with the extension "8bw". Anyone you share the file with can add it to the app&#8217;s home screen and resume as you saved.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_reset">Reset</h3>
+<div class="paragraph">
+<p>Here you can reset the emulation to the start after switching it on. The difference between a hard reset and a soft reset is that a hard reset will overwrite the memory of the emulated computer. Usually, it doesn&#8217;t matter if you&#8217;re doing a soft or a hard reset. Sometimes the soft reset restarts a game instead of just resetting the entire computer. Then choose the hard reset.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_time_machine">Time Machine</h3>
+<div class="paragraph">
+<p>With the time machine, you can reset the emulations into a state it had a few seconds ago. So you can try to solve tricky problems again (and again).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_snapshot">Snapshot</h3>
+<div class="paragraph">
+<p>Here you can save and reload up to five states. Each tile on the Start screen has its own five states.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pause">Pause</h3>
+<div class="paragraph">
+<p>Pauses emulation. You can continue them by tapping anywhere on the screen. However, you do not necessarily need the function, because already opening the menu pauses the emulation.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_all_settings">All Settings</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_keyboard_2">Keyboard</h3>
+<div class="paragraph">
+<p>If you have a hardware keyboard connected, you can open the section for the keyboard and make adjustments there.</p>
+</div>
+<div class="paragraph">
+<p>Make sure that the language settings match the system preferences for your keyboard&#8217;s language. You can freely choose whether the keys that are in the same position as on your hardware keyboard or those with the same symbols should be pressed in the emulation.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_joystick">Joystick</h3>
+<div class="paragraph">
+<p>The emulated computers have one or more joystick ports. You can assign any device that can be used as a joystick (including hardware keyboards) to a joystick port by selecting it from the list under the joystick port name. The list updates when you connect or remove devices.</p>
+</div>
+<div class="paragraph">
+<p>For single-player C64 games, you&#8217;ll need to try out which joystick port is used. The "extra ports" aren&#8217;t very common, but some games make use of them.</p>
+</div>
+<div class="sect3">
+<h4 id="_virtual_touchscreen_joystick">Virtual Touchscreen Joystick</h4>
+<div class="paragraph">
+<p>The virtual touch joystick appears on the screen if your device has a touch surface. You can adjust the position of the direction indicator and the fire button and their transparency. Press the fire button and press or swipe on the direction indicator to use the joystick.</p>
+</div>
+<div class="paragraph">
+<p>If you want to familiarize yourself with the virtual joystick, start <a href="#_bubble_escape">Bubble Escape</a> from the start screen. With the joystick you accelerate the soap bubble, which must not bump anywhere and has to collect the keys. When you have used up all your lives, restart the game with the Fire button.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_virtual_touchscreen_steering_wheel">Virtual Touchscreen Steering Wheel</h4>
+<div class="paragraph">
+<p>Maybe you prefer the steering wheel for racing games to the virtual touch joystick.</p>
+</div>
+<div class="paragraph">
+<p>Move your finger on the steering wheel back and forth or tap the right and left areas of the steering wheel to steer. Move the throttle forward and backward, this corresponds to the directions up and down of the joystick. Pull the throttle in addition to the center of the screen, which corresponds to the fire button on the joystick.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_keyset_a_and_keyset_b">KEYSET_A and KEYSET_B</h4>
+<div class="paragraph">
+<p>If you have a hardware keyboard connected, you can use individual keys such as the cursor keys or WASD as a joystick. However, you will no longer be able to use them for keyboard input. You can make use of keys, WASD or cursor keys are just examples.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_hardware_joysticks">Hardware joysticks</h4>
+<div class="paragraph">
+<p>If you use a USB or Bluetooth joystick, there are no special settings, you determine via the selection list which stick or D-pad of a controller you use.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_devices">Devices</h3>
+<div class="paragraph">
+<p>Here you can set which exact computer model and which floppy drives you want to use. If you turn off precise floppy emulation, loading from floppy images is faster, but may fail due to compatibility issues.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_video">Video</h3>
+<div class="paragraph">
+<p>CRT emulation reproduces the quirks of an old TV. An older device may not be powerful enough for this option.</p>
+</div>
+<div class="paragraph">
+<p>If you turn off the frame, the actual screen content will increase, but maybe your hands on the touch joystick will cover parts of this content. Some games also use parts of the frame for content through technical tricks, then you have to leave the frame turned on.</p>
+</div>
+<div class="paragraph">
+<p>The color palettes change the colors on the monitor.</p>
+</div>
+<div class="paragraph">
+<p>If you turn off the collisions, the computer will not recognize when game characters touch each other or the background. You can use this as a cheat in games.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_audio">Audio</h3>
+<div class="paragraph">
+<p>Maybe your device is too slow for the high audio quality. Just give it a try.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_preinstalled_games">The preinstalled games</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Attention, the computer games back in the days were harder than mobile games of today, so you might need a few tries.
+With a hardware joystick playing is certainly easier than with the virtual touch joystick.</p>
+</div>
+<div class="paragraph">
+<p>All The descriptions are from the original instructions of the games.</p>
+</div>
+<div class="sect2">
+<h3 id="_bubble_escape">Bubble Escape</h3>
+<div class="paragraph">
+<p>You, a sentient soap bubble, have been arrested for your political beliefs by the ruling class of your society, an ancient race of dragons. You find yourself imprisoned in a maze-like dungeon from which you must escape. There is but a single exit, and it will require five different keys to open. You will find these keys randomly deposited throughout the dungeon, but each room presents its own hazards: moving walls, fireballs, hovering sentry robots, and dragon officials. Being a soap bubble, you must be very careful to avoid touching any of these hazards, and the dungeon walls as well, otherwise you will pop. Fortunately, bubbles, like cats, have nine lives.</p>
+</div>
+<div class="paragraph">
+<p>Bubble Escape is well suited for trying out the virtual touch joystick.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_formula_1_simulator">Formula 1 Simulator</h3>
+<div class="paragraph">
+<p>Based on formula one levels of acceleration, braking and road holding, this program has been developed for the ultimate in realism. Get your braking points and line through corners right hold the car on the tyre squealing limit overtaking the other cars if you can and experience all the speed and excitement of motor racing.
+This version gives you a choice of eight tracks, all modelled on the worlds most famous and challenging circuits,</p>
+</div>
+<div class="paragraph">
+<p>CONTROLS
+Joystick in Port 1,  Fire button to start Fire button to change gear.
+or Keys:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>&#8592; Decelerate</p>
+</li>
+<li>
+<p>2 - Right</p>
+</li>
+<li>
+<p>CTRL - Left</p>
+</li>
+<li>
+<p>Space - change gear</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_kikstart_2">Kikstart 2</h3>
+<div class="paragraph">
+<p>Experience yet more of the thrills ami spills of dirt bike riding in this new improved ail action simulation designed for one or two players. Against the clock guide your rider over 24 different courses, keeping a careful lookout for the numerous hazards and
+obstacles which will come your way. These include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Springboards: They will bounce you into the air, although you can prevent this from happening by holding down the fire button.</p>
+</li>
+<li>
+<p>Steps and picnic tables- You will have to jump over these!</p>
+</li>
+<li>
+<p>Wooden ramps, sand, pipes, brick walls, screen walls and gates - Go slowly</p>
+</li>
+<li>
+<p>Tyres, hedges and barrels- Go quickly over these as it Is dangerous to jump.</p>
+</li>
+<li>
+<p>Spikes - Avoid these at ail costs - you have been warned!</p>
+</li>
+<li>
+<p>Mud- Watch out for muddy patches as they will stow you down.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>GAMEPLAY</p>
+</div>
+<div class="paragraph">
+<p>It is possible to enter any of the 24 different courses which are listed from A-X, and select five to play at one time. Should you fall off (and you will!), the computer will restart you in the next convenient position. In the meantime, the timer will count at twice the normal Speed.</p>
+</div>
+<div class="paragraph">
+<p>CONTROLS</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Joystick or Keyboard</p>
+</li>
+<li>
+<p>Player 1 uses a joystick in port one or keyboard.</p>
+</li>
+<li>
+<p>Player 2 uses joystick in port 2.</p>
+</li>
+<li>
+<p>Left - Brake CTRL</p>
+</li>
+<li>
+<p>Right - Accelerate 2</p>
+</li>
+<li>
+<p>Up - Wheelie i</p>
+</li>
+<li>
+<p>Fire - Jump Space</p>
+</li>
+<li>
+<p>Fire - Start Restore</p>
+</li>
+<li>
+<p>Turns off the music during the gams
+ICONS</p>
+</li>
+<li>
+<p>Use the cursor keys to choose an icon and press RETURN or FIRE to select it. From left to right, the icons are :</p>
+</li>
+<li>
+<p>Go, or start game; View high score table ; Go to Editor ; Option of one or two players: Enter player&#8217;s name; Press the appropriate key to select the courses you wish to play.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>THE EDITOR</p>
+</div>
+<div class="paragraph">
+<p>When you enter the Editor option, you will be given a new list of Icons, these are: Go back to main screen; Save to Tape; Load from Tape; Save to disk; Load from disk. Save to computer- This will replace one of the courses With a course created using the Editor.
+Edit- this allows you to create a new course or modify an existing one. Information - this lists the available obstacles and their corresponding letters. Print-' will print the selected object on the course.
+and scrolls through the screen. + and- inserts or deletes sections of the course one character at a time. New obstacles, for example hills, can be created by joining together existing objects and deleting the gaps.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_monty_on_the_run">Monty On The Run</h3>
+<div class="paragraph">
+<p>the game is a flick-screen platformer with puzzly leanings. Learning the movement paths of enemies, and the timing sequence of the crushers, and working out a path across the screen by using the offered ropes and platforms. Not all parts of all screens can be accessed at once.</p>
+</div>
+<div class="paragraph">
+<p>You will need to collect money and other items along the way. Before starting the game, you must choose five items from a selection of 21 to form your 'Freedom Kit' – correct selections are essential to complete the game, and a degree of trial and error is required to know which ones are correct.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_license">License</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>8-bit Wonders is available under the terms and conditions of the <a href="https://opensource.org/licenses/GPL-2.0">GPL-2.0</a>. The source codes are freely available at <a href="https://github.com/eightbitwonders/app" class="bare">https://github.com/eightbitwonders/app</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
