@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   width="114.969"
+   height="27.620001"
+   viewBox="0 0 114.969 27.620001"
+   id="Ebene_1"
+   xml:space="preserve"
+   sodipodi:docname="rainbow.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+   id="namedview11"
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1.0"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0"
+   inkscape:pagecheckerboard="true"
+   showgrid="false"
+   inkscape:zoom="6.0581547"
+   inkscape:cx="55.8751"
+   inkscape:cy="41.679358"
+   inkscape:window-width="1862"
+   inkscape:window-height="1016"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="g3" />
+<metadata
+   id="metadata2736" /><defs
+   id="defs21" />
+<g
+   transform="translate(-319.269,-408.062)"
+   id="g3"><polygon
+   points="434.238,435.682 319.269,435.682 319.269,432.613 434.238,432.613 "
+   id="polygon15-3"
+   style="display:inline;fill:#484e96;fill-rule:evenodd;fill-opacity:1"
+   transform="matrix(1,0,0,9.0301717,0,-3498.5077)" />
+	
+	<polygon
+   points="434.238,408.062 434.238,411.131 319.269,411.131 319.269,408.062 "
+   id="polygon7"
+   style="fill:#e2001a;fill-rule:evenodd" />
+	<polygon
+   points="434.238,414.2 434.238,417.269 319.269,417.269 319.269,414.2 "
+   id="polygon9"
+   style="fill:#e95e38;fill-rule:evenodd" />
+	<polygon
+   points="434.238,420.337 434.238,423.406 319.269,423.406 319.269,420.337 "
+   id="polygon11"
+   style="fill:#ffcc00;fill-rule:evenodd" />
+	<polygon
+   points="434.238,426.475 434.238,429.544 319.269,429.544 319.269,426.475 "
+   id="polygon13"
+   style="fill:#57ab27;fill-rule:evenodd" />
+	<polygon
+   points="434.238,432.613 434.238,435.682 319.269,435.682 319.269,432.613 "
+   id="polygon15"
+   style="display:inline;fill:#009ee0;fill-rule:evenodd" />
+	
+</g>
+</svg>
